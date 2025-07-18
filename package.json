@@ -75,5 +75,8 @@
     "includedScripts": [
       "_fetch-notion-blocks"
     ]
+  },
+  "volta": {
+    "node": "20.18.1"
   }
 }
