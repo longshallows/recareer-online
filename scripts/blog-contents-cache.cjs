@@ -7,7 +7,7 @@ const notion = new Client({ auth: process.env.NOTION_API_SECRET });
 
 const getAllPages = async () => {
   const params = {
-    database_id: process.env.DATABASE_ID,
+    database_id: process.env.ARTICLES_DB_ID,
     filter: {
       and: [
         {

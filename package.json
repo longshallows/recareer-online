@@ -65,7 +65,7 @@
           "!{projectRoot}/**/.*",
           "!{projectRoot}/**/.*/**/*",
           {
-            "env": "DATABASE_ID"
+            "env": "ARTICLES_DB_ID"
           }
         ],
         "outputs": [

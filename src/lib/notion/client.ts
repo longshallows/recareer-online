@@ -6,7 +6,7 @@ import retry from 'async-retry'
 import ExifTransformer from 'exif-be-gone'
 import {
   NOTION_API_SECRET,
-  DATABASE_ID,
+  ARTICLES_DB_ID,
   NUMBER_OF_POSTS_PER_PAGE,
   REQUEST_TIMEOUT_MS,
 } from '../../server-constants'
@@ -71,7 +71,7 @@ export async function getAllPosts(): Promise<Post[]> {
   }
 
   const params: requestParams.QueryDatabase = {
-    database_id: DATABASE_ID,
+    database_id: ARTICLES_DB_ID,
     filter: {
       and: [
         {
@@ -427,7 +427,7 @@ export async function getDatabase(): Promise<Database> {
   }
 
   const params: requestParams.RetrieveDatabase = {
-    database_id: DATABASE_ID,
+    database_id: ARTICLES_DB_ID,
   }
 
   const res = await retry(
